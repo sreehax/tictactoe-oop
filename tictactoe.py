@@ -52,7 +52,7 @@ class TicTacToe:
 		move = ' '
 		while move not in '1 2 3 4 5 6 7 8 9'.split() or not self.isSpaceFree(int(move)):
 			print('What is your next move? (1-9)')
-			move = input()
+			move = input(">>> ")
 		return int(move)
 	def introduce(self):
 		print("Welcome to Tic Tac Toe!")
@@ -60,13 +60,12 @@ class TicTacToe:
 		print("Player 2 is O")
 	def playAgain(self):
 		print('Do you want to play again? (yes or no)')
-		return input(">>> ").lower().startswith('y')
+		return input("> ").lower().startswith('y')
 	def play(self):
 		self.introduce()
 		gameIsPlaying = True
 		turn = 'X'
 		while gameIsPlaying:
-			print(turn)
 			if(turn == 'X'):
 				self.drawBoard()
 				move = self.getPlayerMove('X')
