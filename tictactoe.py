@@ -41,7 +41,13 @@ class TicTacToe:
 			if self.isSpaceFree(i):
 				return False
 		return True
+	def makeBorder(self):
+		choices = ['+', '-', '*', '=', '.', ':', '>', '<', '#']
+		bchar = random.choice(choices)
+		return bchar*40
 	def getPlayerMove(self, letter):
+		print()
+		print(self.makeBorder())
 		print("[It is {}\'s move]".format(letter))
 		move = ' '
 		while move not in '1 2 3 4 5 6 7 8 9'.split() or not self.isSpaceFree(int(move)):
@@ -71,7 +77,7 @@ class TicTacToe:
 					gameIsPlaying = False
 				else:
 					if self.isBoardFull():
-						self.drawBoard()]
+						self.drawBoard()
 						self.result = 'tie'
 						break
 					else:
