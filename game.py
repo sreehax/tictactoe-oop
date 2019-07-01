@@ -1,4 +1,4 @@
-from tictactoe import TicTacToe # import backend
+from tictactoe import TicTacToe  # import backend
 game = TicTacToe()
 while True:
 	game.play()
@@ -10,8 +10,6 @@ while True:
 		print('The game is a tie!')
 	else:
 		print('Error! The game has not finished!')
-
-
 	if not game.playAgain():
 		break
-	game.reset() # call the init function to clear everything
+	game.reset()  # call the init function to clear everything
