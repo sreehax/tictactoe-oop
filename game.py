@@ -14,3 +14,4 @@ while True:
 
 	if not game.playAgain():
 		break
+	game.reset() # call the init function to clear everything

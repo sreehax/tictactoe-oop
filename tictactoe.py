@@ -6,6 +6,7 @@ class TicTacToe:
 		self.result = None
 	def __repr__(self):
 		return "<TicTacToe result='{}'>".format(self.result)
+	reset = __init__
 	def drawBoard(self):
 		print('   |   |')
 		print(' ' + self.board[7] + ' | ' + self.board[8] + ' | ' + self.board[9])
