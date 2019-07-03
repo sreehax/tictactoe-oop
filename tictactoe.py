@@ -1,5 +1,5 @@
 # this code is the backend, and needs a frontend to function.
-import random
+import random, sys
 
 
 class TicTacToe:
@@ -65,6 +65,7 @@ class TicTacToe:
 		while move not in '1 2 3 4 5 6 7 8 9'.split() or not self.isSpaceFree(int(move)):
 			print('What is your next move? (1-9)')
 			move = input(">>> ")
+			if(move == "q" or move == "quit"): sys.exit()
 		return int(move)
 
 	def introduce(self):
